@@ -2,36 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="229cda0b-ae5f-47b8-962f-3098cc69ae0a" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/build.gradle" afterPath="$PROJECT_DIR$/build.gradle" />
-      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" />
-      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" />
-      <change beforePath="$PROJECT_DIR$/gradlew" afterPath="$PROJECT_DIR$/gradlew" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/uk/silvania/hudwidgets/CommonProxy.java" afterPath="$PROJECT_DIR$/src/main/java/co/uk/silvania/hudwidgets/CommonProxy.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/uk/silvania/hudwidgets/GuiWidgetSettings.java" afterPath="$PROJECT_DIR$/src/main/java/co/uk/silvania/hudwidgets/GuiWidgetSettings.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/uk/silvania/hudwidgets/HUDWidgets.java" afterPath="$PROJECT_DIR$/src/main/java/co/uk/silvania/hudwidgets/HUDWidgets.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/uk/silvania/hudwidgets/HUDWidgetsConfig.java" afterPath="$PROJECT_DIR$/src/main/java/co/uk/silvania/hudwidgets/HUDWidgetsConfig.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/uk/silvania/hudwidgets/InGameSettings.java" afterPath="$PROJECT_DIR$/src/main/java/co/uk/silvania/hudwidgets/InGameSettings.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/uk/silvania/hudwidgets/client/ClientProxy.java" afterPath="$PROJECT_DIR$/src/main/java/co/uk/silvania/hudwidgets/client/ClientProxy.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/uk/silvania/hudwidgets/client/ConfigEditor.java" afterPath="$PROJECT_DIR$/src/main/java/co/uk/silvania/hudwidgets/client/ConfigEditor.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/uk/silvania/hudwidgets/client/GuiWidgetArmour.java" afterPath="$PROJECT_DIR$/src/main/java/co/uk/silvania/hudwidgets/client/GuiWidgetArmour.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/uk/silvania/hudwidgets/client/GuiWidgetBase.java" afterPath="$PROJECT_DIR$/src/main/java/co/uk/silvania/hudwidgets/client/GuiWidgetBase.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/uk/silvania/hudwidgets/client/GuiWidgetCompass.java" afterPath="$PROJECT_DIR$/src/main/java/co/uk/silvania/hudwidgets/client/GuiWidgetCompass.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/uk/silvania/hudwidgets/client/GuiWidgetExp.java" afterPath="$PROJECT_DIR$/src/main/java/co/uk/silvania/hudwidgets/client/GuiWidgetExp.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/uk/silvania/hudwidgets/client/GuiWidgetFPS.java" afterPath="$PROJECT_DIR$/src/main/java/co/uk/silvania/hudwidgets/client/GuiWidgetFPS.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/uk/silvania/hudwidgets/client/GuiWidgetGamemode.java" afterPath="$PROJECT_DIR$/src/main/java/co/uk/silvania/hudwidgets/client/GuiWidgetGamemode.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/uk/silvania/hudwidgets/client/GuiWidgetHealth.java" afterPath="$PROJECT_DIR$/src/main/java/co/uk/silvania/hudwidgets/client/GuiWidgetHealth.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/uk/silvania/hudwidgets/client/GuiWidgetHorseHealth.java" afterPath="$PROJECT_DIR$/src/main/java/co/uk/silvania/hudwidgets/client/GuiWidgetHorseHealth.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/uk/silvania/hudwidgets/client/GuiWidgetHorseJump.java" afterPath="$PROJECT_DIR$/src/main/java/co/uk/silvania/hudwidgets/client/GuiWidgetHorseJump.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/uk/silvania/hudwidgets/client/GuiWidgetHotbar.java" afterPath="$PROJECT_DIR$/src/main/java/co/uk/silvania/hudwidgets/client/GuiWidgetHotbar.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/uk/silvania/hudwidgets/client/GuiWidgetHunger.java" afterPath="$PROJECT_DIR$/src/main/java/co/uk/silvania/hudwidgets/client/GuiWidgetHunger.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/uk/silvania/hudwidgets/client/GuiWidgetName.java" afterPath="$PROJECT_DIR$/src/main/java/co/uk/silvania/hudwidgets/client/GuiWidgetName.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/uk/silvania/hudwidgets/client/GuiWidgetOxygen.java" afterPath="$PROJECT_DIR$/src/main/java/co/uk/silvania/hudwidgets/client/GuiWidgetOxygen.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/uk/silvania/hudwidgets/client/GuiWidgetPotionDock.java" afterPath="$PROJECT_DIR$/src/main/java/co/uk/silvania/hudwidgets/client/GuiWidgetPotionDock.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/uk/silvania/hudwidgets/client/GuiWidgetTime.java" afterPath="$PROJECT_DIR$/src/main/java/co/uk/silvania/hudwidgets/client/GuiWidgetTime.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/uk/silvania/hudwidgets/client/GuiWidgetWallet.java" afterPath="$PROJECT_DIR$/src/main/java/co/uk/silvania/hudwidgets/client/GuiWidgetWallet.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/uk/silvania/hudwidgets/client/configs/HUDWidgetsConfigGUI.java" afterPath="$PROJECT_DIR$/src/main/java/co/uk/silvania/hudwidgets/client/configs/HUDWidgetsConfigGUI.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/uk/silvania/hudwidgets/client/configs/HUDWidgetsConfigGUICompass.java" afterPath="$PROJECT_DIR$/src/main/java/co/uk/silvania/hudwidgets/client/configs/HUDWidgetsConfigGUICompass.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mcmod.info" afterPath="$PROJECT_DIR$/src/main/resources/mcmod.info" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change beforePath="$PROJECT_DIR$/HUDWidgets.iws" afterPath="$PROJECT_DIR$/HUDWidgets.iws" />
     </list>
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
@@ -129,7 +101,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GuiWidgetExp.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="GuiWidgetExp.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/co/uk/silvania/hudwidgets/client/GuiWidgetExp.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="289">
@@ -137,6 +109,16 @@
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="476">
+              <caret line="28" column="4" lean-forward="true" selection-start-line="28" selection-start-column="4" selection-end-line="28" selection-end-column="4" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -156,6 +138,7 @@
       <list>
         <option value="$PROJECT_DIR$/src/main/java/co/uk/silvania/hudwidgets/client/GuiWidgetBase.java" />
         <option value="$PROJECT_DIR$/src/main/java/co/uk/silvania/hudwidgets/client/GuiWidgetExp.java" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -482,6 +465,14 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="28" column="4" lean-forward="true" selection-start-line="28" selection-start-column="4" selection-end-line="28" selection-end-column="4" />
+          <folding />
         </state>
       </provider>
     </entry>

@@ -24,3 +24,7 @@
 *.bat
 *.sh
 *.lzma
+
+*.iml
+*.ipr
+*.iws
