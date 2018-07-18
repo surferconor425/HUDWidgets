@@ -25,12 +25,12 @@ public class GuiWidgetArmour extends GuiWidgetBase {
 	@SubscribeEvent(priority = EventPriority.NORMAL)
 	public void onRenderArmourWidget(RenderGameOverlayEvent.Pre event) {
 		boolean enabled = true;
-		int armour = Minecraft.getMinecraft().player.getTotalArmorValue() * 10;
+		int armour = mc.getMinecraft().player.getTotalArmorValue() * 10;
 		
 		if (!HUDWidgetsConfig.armourEnabled || HUDWidgetsConfig.armourBarStyle >= 2) {
 			enabled = false;
 		}
-		if (Minecraft.getMinecraft().player.capabilities.isCreativeMode && !HUDWidgetsConfig.renderArmourCreative) {
+		if (mc.getMinecraft().player.capabilities.isCreativeMode && !HUDWidgetsConfig.renderArmourCreative) {
 			enabled = false;
 		}
 		if (armour == 0 && !HUDWidgetsConfig.alwaysRenderArmour) {

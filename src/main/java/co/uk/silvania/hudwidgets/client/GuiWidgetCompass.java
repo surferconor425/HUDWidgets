@@ -27,13 +27,13 @@ public class GuiWidgetCompass extends GuiWidgetBase {
 		if (!HUDWidgetsConfig.compassEnabled) {
 			enabled = false;
 		}
-		if (Minecraft.getMinecraft().player.capabilities.isCreativeMode && !HUDWidgetsConfig.renderCompassCreative) {
+		if (mc.getMinecraft().player.capabilities.isCreativeMode && !HUDWidgetsConfig.renderCompassCreative) {
 			enabled = false;
 		}
 		
 		if (enabled) {
 			FontRenderer font = mc.fontRenderer;
-			int rotation = MathHelper.floor(Minecraft.getMinecraft().player.getRotationYawHead());
+			int rotation = MathHelper.floor(mc.getMinecraft().player.getRotationYawHead());
 			while (rotation > 360) {
 				rotation = rotation - 360;
 			}

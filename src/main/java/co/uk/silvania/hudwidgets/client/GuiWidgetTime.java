@@ -26,7 +26,7 @@ public class GuiWidgetTime extends GuiWidgetBase {
 		if (!HUDWidgetsConfig.timeEnabled) {
 			enabled = false;
 		}
-		if (!HUDWidgetsConfig.renderTimeCreative && Minecraft.getMinecraft().player.capabilities.isCreativeMode) {
+		if (!HUDWidgetsConfig.renderTimeCreative && mc.getMinecraft().player.capabilities.isCreativeMode) {
 			enabled = false;
 		}
 		

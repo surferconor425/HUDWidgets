@@ -27,13 +27,13 @@ public class GuiWidgetName extends GuiWidgetBase {
 			enabled = false;
 		}
 
-		if (Minecraft.getMinecraft().player.capabilities.isCreativeMode && !HUDWidgetsConfig.renderNameCreative) {
+		if (mc.getMinecraft().player.capabilities.isCreativeMode && !HUDWidgetsConfig.renderNameCreative) {
 			enabled = false;
 		}
 		
 		if (enabled) {
 			FontRenderer font = mc.fontRenderer;
-			String name = Minecraft.getMinecraft().player.getDisplayNameString();
+			String name = mc.getMinecraft().player.getDisplayNameString();
 			
 			double widthMultiplier = getResIncreaseMultiplier("x");
 			double heightMultiplier = getResIncreaseMultiplier("y");

@@ -32,11 +32,11 @@ public class GuiWidgetGamemode extends GuiWidgetBase {
 			
 			String gameMode = "Survival";
 			int textColour = HUDWidgetsConfig.gamemodeSTextColour;
-			if (Minecraft.getMinecraft().player.capabilities.isCreativeMode) {
+			if (mc.getMinecraft().player.capabilities.isCreativeMode) {
 				gameMode = "Creative";
 				textColour = HUDWidgetsConfig.gamemodeCTextColour;
 			}
-			if (!Minecraft.getMinecraft().player.capabilities.allowEdit) {
+			if (!mc.getMinecraft().player.capabilities.allowEdit) {
 				gameMode = "Adventure";
 				textColour = HUDWidgetsConfig.gamemodeATextColour;
 			}

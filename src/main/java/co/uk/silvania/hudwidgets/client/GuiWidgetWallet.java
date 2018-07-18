@@ -32,7 +32,7 @@ public class GuiWidgetWallet extends GuiWidgetBase {
 		if (!HUDWidgetsConfig.walletEnabled) {
 			enabled = false;
 		}
-		if (!HUDWidgetsConfig.renderWalletCreative && Minecraft.getMinecraft().player.capabilities.isCreativeMode) {
+		if (!HUDWidgetsConfig.renderWalletCreative && mc.getMinecraft().player.capabilities.isCreativeMode) {
 			enabled = false;
 		}
 		

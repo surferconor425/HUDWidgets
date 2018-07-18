@@ -30,7 +30,7 @@ public class GuiWidgetFPS extends GuiWidgetBase {
 		if (!HUDWidgetsConfig.fpsEnabled) {
 			enabled = false;
 		}
-		if (!HUDWidgetsConfig.renderFPSCreative && Minecraft.getMinecraft().player.capabilities.isCreativeMode) {
+		if (!HUDWidgetsConfig.renderFPSCreative && mc.getMinecraft().player.capabilities.isCreativeMode) {
 			enabled = false;
 		}
 		

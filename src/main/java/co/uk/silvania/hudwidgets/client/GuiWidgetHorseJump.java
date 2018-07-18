@@ -26,14 +26,14 @@ public class GuiWidgetHorseJump extends GuiWidgetBase {
 			enabled = false;
 		}
 		
-		if (Minecraft.getMinecraft().player.capabilities.isCreativeMode && !HUDWidgetsConfig.renderHorseJumpBarCreative) {
+		if (mc.getMinecraft().player.capabilities.isCreativeMode && !HUDWidgetsConfig.renderHorseJumpBarCreative) {
 			enabled = false;
 		}
 		
-		if(Minecraft.getMinecraft().player.isRidingHorse() || HUDWidgetsConfig.alwaysRenderHorseJumpBar) {
+		if(mc.getMinecraft().player.isRidingHorse() || HUDWidgetsConfig.alwaysRenderHorseJumpBar) {
 		
 			if (enabled) {
-				float power = Minecraft.getMinecraft().player.getHorseJumpPower();
+				float power = mc.getMinecraft().player.getHorseJumpPower();
 				int jump = (int) Math.round(power * 200);
 				
 				double widthMultiplier = getResIncreaseMultiplier("x");

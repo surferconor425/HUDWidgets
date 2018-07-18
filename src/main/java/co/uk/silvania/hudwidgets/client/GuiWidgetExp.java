@@ -3,7 +3,7 @@ package co.uk.silvania.hudwidgets.client;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.FontRenderer;
 import net.minecraft.client.renderer.Tessellator;
-import net.minecraft.client.renderer.vertex.*;
+import net.minecraft.client.renderer.BufferBuilder;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.client.event.RenderGameOverlayEvent;
 
@@ -31,15 +31,15 @@ public class GuiWidgetExp extends GuiWidgetBase {
 		if (!HUDWidgetsConfig.expEnabled) {
 			enabled = false;
 		}
-		if (Minecraft.getMinecraft().player.capabilities.isCreativeMode && !HUDWidgetsConfig.renderExpCreative) {
+		if (mc.getMinecraft().player.capabilities.isCreativeMode && !HUDWidgetsConfig.renderExpCreative) {
 			enabled = false;
 		}
 		
 		if (enabled) {
 			FontRenderer font = mc.fontRenderer;
 			
-			int currentLevel = Minecraft.getMinecraft().player.experienceLevel;
-			int experienceAmount = Math.round((Minecraft.getMinecraft().player.experience * 1000) / 5);
+			int currentLevel = mc.getMinecraft().player.experienceLevel;
+			int experienceAmount = Math.round((mc.getMinecraft().player.experience * 1000) / 5);
 
 			int expCap = 0;
 			
@@ -51,7 +51,7 @@ public class GuiWidgetExp extends GuiWidgetBase {
 		    	expCap = 17;
 		    }
 			
-			float experience = Minecraft.getMinecraft().player.experience * expCap;
+			float experience = mc.getMinecraft().player.experience * expCap;
 			
 			double widthMultiplier = getResIncreaseMultiplier("x");
 			double heightMultiplier = getResIncreaseMultiplier("y");
@@ -91,16 +91,15 @@ public class GuiWidgetExp extends GuiWidgetBase {
 			this.mc.renderEngine.bindTexture(hudStatIcons);
 	        float f = 0.00390625F;
 	        float f1 = 0.00390625F;
-	        Vertex vertex = VertexBuffer.instance;
 	        Tessellator tessellator = Tessellator.instance;
+			WorldRenderer wr = Tessellator.getInstance().getWorldRenderer();
 	        tessellator.startDrawingQuads();
 			//tessellator.setColorRGBA_I(l << 16, 128);
-	        tessellator.addVertexWithUV((double)(xP/**********/**os + 2), (double)(yPos + 19), (double)this.zLevel, (double)((float)(18) * f), (double)((float)(36) * f1));
+	        tessellator.addVertexWithUV((double)(xPos + 2), (double)(yPos + 19), (double)this.zLevel, (double)((float)(18) * f), (double)((float)(36) * f1));
 	        tessellator.addVertexWithUV((double)(xPos + 20), (double)(yPos + 19), (double)this.zLevel, (double)((float)(36) * f), (double)((float)(36) * f1));
 	        tessellator.addVertexWithUV((double)(xPos + 20), (double)(yPos + 1), (double)this.zLevel, (double)((float)(36) * f), (double)((float)(18) * f1));
 	        tessellator.addVertexWithUV((double)(xPos + 2), (double)(yPos + 1), (double)this.zLevel, (double)((float)(18) * f), (double)((float)(18) * f1));
 	        tessellator.draw();
-	        tessellator.
 			
 			font.drawStringWithShadow("Experience: " + (int)experience + "/" + expCap, xPos + 22, yPos + 6, HUDWidgetsConfig.expTextColour);
 			font.drawStringWithShadow("Lvl: " + currentLevel, xPos + 142, yPos + 6, HUDWidgetsConfig.expTextColour);

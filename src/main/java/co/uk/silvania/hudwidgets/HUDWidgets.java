@@ -56,26 +56,26 @@ public class HUDWidgets {
     
     @SideOnly(Side.CLIENT)
     public void enableGuiStuff() {
-    	if (!Minecraft.getMinecraft().gameSettings.showDebugInfo) {
-    		MinecraftForge.EVENT_BUS.register(new GuiWidgetBase(Minecraft.getMinecraft()));
+    	if (!mc.getMinecraft().gameSettings.showDebugInfo) {
+    		MinecraftForge.EVENT_BUS.register(new GuiWidgetBase(mc.getMinecraft()));
 	    	
-	    	MinecraftForge.EVENT_BUS.register(new GuiWidgetArmour(Minecraft.getMinecraft()));
-	    	MinecraftForge.EVENT_BUS.register(new GuiWidgetCompass(Minecraft.getMinecraft()));
-	    	MinecraftForge.EVENT_BUS.register(new GuiWidgetExp(Minecraft.getMinecraft()));
-	    	MinecraftForge.EVENT_BUS.register(new GuiWidgetGamemode(Minecraft.getMinecraft()));
-	    	MinecraftForge.EVENT_BUS.register(new GuiWidgetHealth(Minecraft.getMinecraft())); 
-	    	MinecraftForge.EVENT_BUS.register(new GuiWidgetHorseHealth(Minecraft.getMinecraft()));
-	    	MinecraftForge.EVENT_BUS.register(new GuiWidgetHorseJump(Minecraft.getMinecraft()));
-	    	MinecraftForge.EVENT_BUS.register(new GuiWidgetHotbar(Minecraft.getMinecraft())); //TODO 1
-	    	MinecraftForge.EVENT_BUS.register(new GuiWidgetHunger(Minecraft.getMinecraft()));
-	    	MinecraftForge.EVENT_BUS.register(new GuiWidgetName(Minecraft.getMinecraft()));
-	    	MinecraftForge.EVENT_BUS.register(new GuiWidgetOxygen(Minecraft.getMinecraft()));
-	    	//MinecraftForge.EVENT_BUS.register(new GuiWidgetPotionDock(Minecraft.getMinecraft())); //TODO 2
-	    	MinecraftForge.EVENT_BUS.register(new GuiWidgetTime(Minecraft.getMinecraft()));
-	    	//MinecraftForge.EVENT_BUS.register(new GuiWidgetFPS(Minecraft.getMinecraft()));
+	    	MinecraftForge.EVENT_BUS.register(new GuiWidgetArmour(mc.getMinecraft()));
+	    	MinecraftForge.EVENT_BUS.register(new GuiWidgetCompass(mc.getMinecraft()));
+	    	MinecraftForge.EVENT_BUS.register(new GuiWidgetExp(mc.getMinecraft()));
+	    	MinecraftForge.EVENT_BUS.register(new GuiWidgetGamemode(mc.getMinecraft()));
+	    	MinecraftForge.EVENT_BUS.register(new GuiWidgetHealth(mc.getMinecraft()));
+	    	MinecraftForge.EVENT_BUS.register(new GuiWidgetHorseHealth(mc.getMinecraft()));
+	    	MinecraftForge.EVENT_BUS.register(new GuiWidgetHorseJump(mc.getMinecraft()));
+	    	MinecraftForge.EVENT_BUS.register(new GuiWidgetHotbar(mc.getMinecraft())); //TODO 1
+	    	MinecraftForge.EVENT_BUS.register(new GuiWidgetHunger(mc.getMinecraft()));
+	    	MinecraftForge.EVENT_BUS.register(new GuiWidgetName(mc.getMinecraft()));
+	    	MinecraftForge.EVENT_BUS.register(new GuiWidgetOxygen(mc.getMinecraft()));
+	    	//MinecraftForge.EVENT_BUS.register(new GuiWidgetPotionDock(mc.getMinecraft())); //TODO 2
+	    	MinecraftForge.EVENT_BUS.register(new GuiWidgetTime(mc.getMinecraft()));
+	    	//MinecraftForge.EVENT_BUS.register(new GuiWidgetFPS(mc.getMinecraft()));
 	    	if (Loader.isModLoaded("flenixcities") || (Loader.isModLoaded("mceconomy2"))) {
 	    		System.out.println("FlenixCities and/or MCEconomy2 detected; allowing Wallet widget!");
-	    		MinecraftForge.EVENT_BUS.register(new GuiWidgetWallet(Minecraft.getMinecraft())); //TODO 2
+	    		MinecraftForge.EVENT_BUS.register(new GuiWidgetWallet(mc.getMinecraft())); //TODO 2
 	    	}
 	    	//Notifications
 	    	//MOTD

@@ -23,12 +23,12 @@ public class GuiWidgetOxygen extends GuiWidgetBase {
 	@SubscribeEvent(priority = EventPriority.NORMAL)
 	public void onRenderGui(RenderGameOverlayEvent.Pre event) {
 		boolean enabled = true;
-		int oxygen = Minecraft.getMinecraft().player.getAir();
+		int oxygen = mc.getMinecraft().player.getAir();
 		if (!HUDWidgetsConfig.oxygenEnabled || HUDWidgetsConfig.oxygenBarStyle >= 2) {
 			enabled = false;
 		}
 
-		if (Minecraft.getMinecraft().player.capabilities.isCreativeMode && !HUDWidgetsConfig.renderOxygenCreative) {
+		if (mc.getMinecraft().player.capabilities.isCreativeMode && !HUDWidgetsConfig.renderOxygenCreative) {
 			enabled = false;
 		}
 		

@@ -19,9 +19,9 @@ public class GuiWidgetHorseHealth extends GuiWidgetBase {
 	public GuiWidgetHorseHealth(Minecraft mc) {
 		super(mc);
 	}
-	
+
 	private static final ResourceLocation guiStatsBar = new ResourceLocation(HUDWidgets.modid, "textures/gui/" + HUDWidgetsConfig.horseHealthTextureStyle);
-	
+
 	@SubscribeEvent(priority = EventPriority.NORMAL)
 	public void onRenderGui(RenderGameOverlayEvent.Pre event) {
 		boolean enabled = true;		
@@ -29,22 +29,22 @@ public class GuiWidgetHorseHealth extends GuiWidgetBase {
 			enabled = false;
 		}
 
-		if (!(Minecraft.getMinecraft().player.isRidingHorse() instanceof EntityLivingBase)) {
+		if (!(mc.getMinecraft().player.isRidingHorse() instanceof EntityLivingBase)) {
 			enabled = false;
 		}
 
-		if (Minecraft.getMinecraft().player.capabilities.isCreativeMode && !HUDWidgetsConfig.renderHorseHealthCreative) {
+		if (mc.getMinecraft().player.capabilities.isCreativeMode && !HUDWidgetsConfig.renderHorseHealthCreative) {
 			enabled = false;
 		}
 		
-		if (Minecraft.getMinecraft().player.isRiding() || HUDWidgetsConfig.alwaysRenderHorseHealth) {
+		if (mc.getMinecraft().player.isRiding() || HUDWidgetsConfig.alwaysRenderHorseHealth) {
 			if (enabled) {
-		        Entity entity = Minecraft.getMinecraft().player.ridingEntity;
+		        Entity entity = mc.getMinecraft().player.ridingEntity;
 				EntityLivingBase mount = (EntityLivingBase) entity;
 				
 				FontRenderer font = mc.fontRenderer;
 				
-				String mountName = "" + Minecraft.getMinecraft().player.ridingEntity.getEntityId(); //TODO Fix .getEntityName();
+				String mountName = "" + mc.getMinecraft().player.getRidingEntity().getEntityId(); //TODO Fix .getEntityName();
 				float mountHealth = mount.getHealth();
 				float mountMaxHealth = mount.getMaxHealth();
 				int healthAmount = (int) Math.round((200 / mountMaxHealth) * mountHealth);

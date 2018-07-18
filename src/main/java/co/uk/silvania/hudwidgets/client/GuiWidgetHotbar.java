@@ -2,7 +2,7 @@ package co.uk.silvania.hudwidgets.client;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.RenderHelper;
-import net.minecraft.client.renderer.entity.RenderItem;
+import net.minecraft.client.renderer.RenderItem;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
@@ -52,11 +52,11 @@ public class GuiWidgetHotbar extends GuiWidgetBase {
 	        mc.renderEngine.bindTexture(guiStatsBar);
 	        
 	        if (HUDWidgetsConfig.horizontalHotbar) {
-	        	InventoryPlayer inv = Minecraft.getMinecraft().player.inventory;
+	        	InventoryPlayer inv = mc.getMinecraft().player.inventory;
 	            drawTexturedModalRect(xPos, yPos, 0, 168, sizeX, sizeY);
 	            drawTexturedModalRect(xPos - 1 + (inv.currentItem * 20), yPos - 1, 182, 168, 24, 24);
 	        } else {
-	        	InventoryPlayer inv = Minecraft.getMinecraft().player.inventory;
+	        	InventoryPlayer inv = mc.getMinecraft().player.inventory;
 		        drawTexturedModalRect(xPos, yPos, 234, 0, sizeX, sizeY);
 		        drawTexturedModalRect(xPos - 1, yPos - 1 + (inv.currentItem * 20), 182, 168, 24, 24);
 	        }
@@ -111,7 +111,7 @@ public class GuiWidgetHotbar extends GuiWidgetBase {
 	}
 	
 	protected void renderInventorySlot(int par1, int par2, int par3, float par4) {
-        ItemStack itemstack = this.Minecraft.getMinecraft().player.inventory.mainInventory[par1];
+        ItemStack itemstack = this.mc.getMinecraft().player.inventory.mainInventory[par1];
 
         if (itemstack != null) {
             float f1 = (float)itemstack.animationsToGo - par4;

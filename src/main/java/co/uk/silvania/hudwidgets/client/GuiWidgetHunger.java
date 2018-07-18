@@ -27,14 +27,14 @@ public class GuiWidgetHunger extends GuiWidgetBase {
 		if (!HUDWidgetsConfig.hungerEnabled) {
 			enabled = false;
 		}
-		if (Minecraft.getMinecraft().player.capabilities.isCreativeMode && !HUDWidgetsConfig.renderHungerCreative) {
+		if (mc.getMinecraft().player.capabilities.isCreativeMode && !HUDWidgetsConfig.renderHungerCreative) {
 			enabled = false;
 		}
 		
 		if (enabled) {
 			FontRenderer font = mc.fontRenderer;
 			
-			int hunger = Minecraft.getMinecraft().player.getFoodStats().getFoodLevel();
+			int hunger = mc.getMinecraft().player.getFoodStats().getFoodLevel();
 			int maxHunger = 20;
 			
 			int hungerAmount = (200 / maxHunger) * hunger;
