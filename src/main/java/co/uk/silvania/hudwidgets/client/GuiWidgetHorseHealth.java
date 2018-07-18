@@ -11,8 +11,8 @@ import org.lwjgl.opengl.GL11;
 
 import co.uk.silvania.hudwidgets.HUDWidgets;
 import co.uk.silvania.hudwidgets.HUDWidgetsConfig;
-import cpw.mods.fml.common.eventhandler.EventPriority;
-import cpw.mods.fml.common.eventhandler.SubscribeEvent;
+import net.minecraftforge.fml.common.eventhandler.EventPriority;
+import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
 public class GuiWidgetHorseHealth extends GuiWidgetBase {
 
@@ -28,23 +28,23 @@ public class GuiWidgetHorseHealth extends GuiWidgetBase {
 		if (!HUDWidgetsConfig.horseHealthEnabled) {
 			enabled = false;
 		}
-		
-		if (!(mc.thePlayer.ridingEntity instanceof EntityLivingBase)) {
+
+		if (!(Minecraft.getMinecraft().player.isRidingHorse() instanceof EntityLivingBase)) {
+			enabled = false;
+		}
+
+		if (Minecraft.getMinecraft().player.capabilities.isCreativeMode && !HUDWidgetsConfig.renderHorseHealthCreative) {
 			enabled = false;
 		}
 		
-		if (mc.thePlayer.capabilities.isCreativeMode && !HUDWidgetsConfig.renderHorseHealthCreative) {
-			enabled = false;
-		}
-		
-		if (mc.thePlayer.isRiding() || HUDWidgetsConfig.alwaysRenderHorseHealth) {
+		if (Minecraft.getMinecraft().player.isRiding() || HUDWidgetsConfig.alwaysRenderHorseHealth) {
 			if (enabled) {
-		        Entity entity = mc.thePlayer.ridingEntity;
+		        Entity entity = Minecraft.getMinecraft().player.ridingEntity;
 				EntityLivingBase mount = (EntityLivingBase) entity;
 				
 				FontRenderer font = mc.fontRenderer;
 				
-				String mountName = "" + mc.thePlayer.ridingEntity.getEntityId(); //TODO Fix .getEntityName();
+				String mountName = "" + Minecraft.getMinecraft().player.ridingEntity.getEntityId(); //TODO Fix .getEntityName();
 				float mountHealth = mount.getHealth();
 				float mountMaxHealth = mount.getMaxHealth();
 				int healthAmount = (int) Math.round((200 / mountMaxHealth) * mountHealth);

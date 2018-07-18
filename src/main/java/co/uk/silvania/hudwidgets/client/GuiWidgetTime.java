@@ -9,8 +9,8 @@ import org.lwjgl.opengl.GL11;
 
 import co.uk.silvania.hudwidgets.HUDWidgets;
 import co.uk.silvania.hudwidgets.HUDWidgetsConfig;
-import cpw.mods.fml.common.eventhandler.EventPriority;
-import cpw.mods.fml.common.eventhandler.SubscribeEvent;
+import net.minecraftforge.fml.common.eventhandler.EventPriority;
+import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
 public class GuiWidgetTime extends GuiWidgetBase {
 
@@ -26,7 +26,7 @@ public class GuiWidgetTime extends GuiWidgetBase {
 		if (!HUDWidgetsConfig.timeEnabled) {
 			enabled = false;
 		}
-		if (!HUDWidgetsConfig.renderTimeCreative && mc.thePlayer.capabilities.isCreativeMode) {
+		if (!HUDWidgetsConfig.renderTimeCreative && Minecraft.getMinecraft().player.capabilities.isCreativeMode) {
 			enabled = false;
 		}
 		

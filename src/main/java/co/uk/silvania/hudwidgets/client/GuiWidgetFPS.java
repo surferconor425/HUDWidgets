@@ -4,8 +4,8 @@ import org.lwjgl.opengl.GL11;
 
 import co.uk.silvania.hudwidgets.HUDWidgets;
 import co.uk.silvania.hudwidgets.HUDWidgetsConfig;
-import cpw.mods.fml.common.eventhandler.EventPriority;
-import cpw.mods.fml.common.eventhandler.SubscribeEvent;
+import net.minecraftforge.fml.common.eventhandler.EventPriority;
+import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.FontRenderer;
 import net.minecraft.util.ResourceLocation;
@@ -30,7 +30,7 @@ public class GuiWidgetFPS extends GuiWidgetBase {
 		if (!HUDWidgetsConfig.fpsEnabled) {
 			enabled = false;
 		}
-		if (!HUDWidgetsConfig.renderFPSCreative && mc.thePlayer.capabilities.isCreativeMode) {
+		if (!HUDWidgetsConfig.renderFPSCreative && Minecraft.getMinecraft().player.capabilities.isCreativeMode) {
 			enabled = false;
 		}
 		

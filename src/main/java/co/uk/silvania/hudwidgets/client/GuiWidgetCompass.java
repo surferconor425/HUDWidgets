@@ -2,7 +2,7 @@ package co.uk.silvania.hudwidgets.client;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.FontRenderer;
-import net.minecraft.util.MathHelper;
+import net.minecraft.util.math.MathHelper;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.client.event.RenderGameOverlayEvent;
 
@@ -10,8 +10,8 @@ import org.lwjgl.opengl.GL11;
 
 import co.uk.silvania.hudwidgets.HUDWidgets;
 import co.uk.silvania.hudwidgets.HUDWidgetsConfig;
-import cpw.mods.fml.common.eventhandler.EventPriority;
-import cpw.mods.fml.common.eventhandler.SubscribeEvent;
+import net.minecraftforge.fml.common.eventhandler.EventPriority;
+import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
 public class GuiWidgetCompass extends GuiWidgetBase {
 
@@ -27,13 +27,13 @@ public class GuiWidgetCompass extends GuiWidgetBase {
 		if (!HUDWidgetsConfig.compassEnabled) {
 			enabled = false;
 		}
-		if (mc.thePlayer.capabilities.isCreativeMode && !HUDWidgetsConfig.renderCompassCreative) {
+		if (Minecraft.getMinecraft().player.capabilities.isCreativeMode && !HUDWidgetsConfig.renderCompassCreative) {
 			enabled = false;
 		}
 		
 		if (enabled) {
 			FontRenderer font = mc.fontRenderer;
-			int rotation = MathHelper.floor_double(mc.thePlayer.getRotationYawHead());
+			int rotation = MathHelper.floor(Minecraft.getMinecraft().player.getRotationYawHead());
 			while (rotation > 360) {
 				rotation = rotation - 360;
 			}

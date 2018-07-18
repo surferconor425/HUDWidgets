@@ -5,7 +5,7 @@ import java.util.logging.Level;
 
 import net.minecraftforge.common.config.Configuration;
 import co.uk.silvania.hudwidgets.client.GuiWidgetBase;
-import cpw.mods.fml.common.FMLLog;
+import net.minecraftforge.fml.common.FMLLog;
 
 public class HUDWidgetsConfig {
 	

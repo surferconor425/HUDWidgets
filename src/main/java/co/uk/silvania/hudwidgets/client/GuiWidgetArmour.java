@@ -4,8 +4,8 @@ import org.lwjgl.opengl.GL11;
 
 import co.uk.silvania.hudwidgets.HUDWidgets;
 import co.uk.silvania.hudwidgets.HUDWidgetsConfig;
-import cpw.mods.fml.common.eventhandler.EventPriority;
-import cpw.mods.fml.common.eventhandler.SubscribeEvent;
+import net.minecraftforge.fml.common.eventhandler.EventPriority;
+import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.FontRenderer;
 import net.minecraft.util.ResourceLocation;
@@ -25,12 +25,12 @@ public class GuiWidgetArmour extends GuiWidgetBase {
 	@SubscribeEvent(priority = EventPriority.NORMAL)
 	public void onRenderArmourWidget(RenderGameOverlayEvent.Pre event) {
 		boolean enabled = true;
-		int armour = mc.thePlayer.getTotalArmorValue() * 10;
+		int armour = Minecraft.getMinecraft().player.getTotalArmorValue() * 10;
 		
 		if (!HUDWidgetsConfig.armourEnabled || HUDWidgetsConfig.armourBarStyle >= 2) {
 			enabled = false;
 		}
-		if (mc.thePlayer.capabilities.isCreativeMode && !HUDWidgetsConfig.renderArmourCreative) {
+		if (Minecraft.getMinecraft().player.capabilities.isCreativeMode && !HUDWidgetsConfig.renderArmourCreative) {
 			enabled = false;
 		}
 		if (armour == 0 && !HUDWidgetsConfig.alwaysRenderArmour) {

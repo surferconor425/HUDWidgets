@@ -9,8 +9,8 @@ import org.lwjgl.opengl.GL11;
 
 import co.uk.silvania.hudwidgets.HUDWidgets;
 import co.uk.silvania.hudwidgets.HUDWidgetsConfig;
-import cpw.mods.fml.common.eventhandler.EventPriority;
-import cpw.mods.fml.common.eventhandler.SubscribeEvent;
+import net.minecraftforge.fml.common.eventhandler.EventPriority;
+import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
 public class GuiWidgetName extends GuiWidgetBase {
 
@@ -27,13 +27,13 @@ public class GuiWidgetName extends GuiWidgetBase {
 			enabled = false;
 		}
 
-		if (mc.thePlayer.capabilities.isCreativeMode && !HUDWidgetsConfig.renderNameCreative) {
+		if (Minecraft.getMinecraft().player.capabilities.isCreativeMode && !HUDWidgetsConfig.renderNameCreative) {
 			enabled = false;
 		}
 		
 		if (enabled) {
 			FontRenderer font = mc.fontRenderer;
-			String name = mc.thePlayer.getDisplayName();
+			String name = Minecraft.getMinecraft().player.getDisplayNameString();
 			
 			double widthMultiplier = getResIncreaseMultiplier("x");
 			double heightMultiplier = getResIncreaseMultiplier("y");

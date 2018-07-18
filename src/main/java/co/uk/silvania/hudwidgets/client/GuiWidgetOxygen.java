@@ -9,8 +9,8 @@ import org.lwjgl.opengl.GL11;
 
 import co.uk.silvania.hudwidgets.HUDWidgets;
 import co.uk.silvania.hudwidgets.HUDWidgetsConfig;
-import cpw.mods.fml.common.eventhandler.EventPriority;
-import cpw.mods.fml.common.eventhandler.SubscribeEvent;
+import net.minecraftforge.fml.common.eventhandler.EventPriority;
+import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
 public class GuiWidgetOxygen extends GuiWidgetBase {
 
@@ -23,12 +23,12 @@ public class GuiWidgetOxygen extends GuiWidgetBase {
 	@SubscribeEvent(priority = EventPriority.NORMAL)
 	public void onRenderGui(RenderGameOverlayEvent.Pre event) {
 		boolean enabled = true;
-		int oxygen = mc.thePlayer.getAir();
+		int oxygen = Minecraft.getMinecraft().player.getAir();
 		if (!HUDWidgetsConfig.oxygenEnabled || HUDWidgetsConfig.oxygenBarStyle >= 2) {
 			enabled = false;
 		}
 
-		if (mc.thePlayer.capabilities.isCreativeMode && !HUDWidgetsConfig.renderOxygenCreative) {
+		if (Minecraft.getMinecraft().player.capabilities.isCreativeMode && !HUDWidgetsConfig.renderOxygenCreative) {
 			enabled = false;
 		}
 		

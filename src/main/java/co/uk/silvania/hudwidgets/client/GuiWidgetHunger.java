@@ -9,9 +9,9 @@ import org.lwjgl.opengl.GL11;
 
 import co.uk.silvania.hudwidgets.HUDWidgets;
 import co.uk.silvania.hudwidgets.HUDWidgetsConfig;
-import cpw.mods.fml.common.Loader;
-import cpw.mods.fml.common.eventhandler.EventPriority;
-import cpw.mods.fml.common.eventhandler.SubscribeEvent;
+import net.minecraftforge.fml.common.Loader;
+import net.minecraftforge.fml.common.eventhandler.EventPriority;
+import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
 public class GuiWidgetHunger extends GuiWidgetBase {
 	
@@ -27,14 +27,14 @@ public class GuiWidgetHunger extends GuiWidgetBase {
 		if (!HUDWidgetsConfig.hungerEnabled) {
 			enabled = false;
 		}
-		if (mc.thePlayer.capabilities.isCreativeMode && !HUDWidgetsConfig.renderHungerCreative) {
+		if (Minecraft.getMinecraft().player.capabilities.isCreativeMode && !HUDWidgetsConfig.renderHungerCreative) {
 			enabled = false;
 		}
 		
 		if (enabled) {
 			FontRenderer font = mc.fontRenderer;
 			
-			int hunger = mc.thePlayer.getFoodStats().getFoodLevel();
+			int hunger = Minecraft.getMinecraft().player.getFoodStats().getFoodLevel();
 			int maxHunger = 20;
 			
 			int hungerAmount = (200 / maxHunger) * hunger;

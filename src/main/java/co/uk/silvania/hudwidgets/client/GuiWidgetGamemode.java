@@ -9,8 +9,8 @@ import org.lwjgl.opengl.GL11;
 
 import co.uk.silvania.hudwidgets.HUDWidgets;
 import co.uk.silvania.hudwidgets.HUDWidgetsConfig;
-import cpw.mods.fml.common.eventhandler.EventPriority;
-import cpw.mods.fml.common.eventhandler.SubscribeEvent;
+import net.minecraftforge.fml.common.eventhandler.EventPriority;
+import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
 public class GuiWidgetGamemode extends GuiWidgetBase {
 
@@ -32,11 +32,11 @@ public class GuiWidgetGamemode extends GuiWidgetBase {
 			
 			String gameMode = "Survival";
 			int textColour = HUDWidgetsConfig.gamemodeSTextColour;
-			if (mc.thePlayer.capabilities.isCreativeMode) {
+			if (Minecraft.getMinecraft().player.capabilities.isCreativeMode) {
 				gameMode = "Creative";
 				textColour = HUDWidgetsConfig.gamemodeCTextColour;
 			}
-			if (!mc.thePlayer.capabilities.allowEdit) {
+			if (!Minecraft.getMinecraft().player.capabilities.allowEdit) {
 				gameMode = "Adventure";
 				textColour = HUDWidgetsConfig.gamemodeATextColour;
 			}

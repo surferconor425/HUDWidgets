@@ -14,9 +14,9 @@ import co.uk.silvania.cities.econ.EconUtils;
 //import co.uk.silvania.cities.econ.EconUtils;
 import co.uk.silvania.hudwidgets.HUDWidgets;
 import co.uk.silvania.hudwidgets.HUDWidgetsConfig;
-import cpw.mods.fml.common.Loader;
-import cpw.mods.fml.common.eventhandler.EventPriority;
-import cpw.mods.fml.common.eventhandler.SubscribeEvent;
+import net.minecraftforge.fml.common.Loader;
+import net.minecraftforge.fml.common.eventhandler.EventPriority;
+import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
 public class GuiWidgetWallet extends GuiWidgetBase {
 
@@ -32,7 +32,7 @@ public class GuiWidgetWallet extends GuiWidgetBase {
 		if (!HUDWidgetsConfig.walletEnabled) {
 			enabled = false;
 		}
-		if (!HUDWidgetsConfig.renderWalletCreative && mc.thePlayer.capabilities.isCreativeMode) {
+		if (!HUDWidgetsConfig.renderWalletCreative && Minecraft.getMinecraft().player.capabilities.isCreativeMode) {
 			enabled = false;
 		}
 		

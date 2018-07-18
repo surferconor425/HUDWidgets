@@ -8,8 +8,8 @@ import org.lwjgl.opengl.GL11;
 
 import co.uk.silvania.hudwidgets.HUDWidgets;
 import co.uk.silvania.hudwidgets.HUDWidgetsConfig;
-import cpw.mods.fml.common.eventhandler.EventPriority;
-import cpw.mods.fml.common.eventhandler.SubscribeEvent;
+import net.minecraftforge.fml.common.eventhandler.EventPriority;
+import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
 public class GuiWidgetHorseJump extends GuiWidgetBase {
 
@@ -26,14 +26,14 @@ public class GuiWidgetHorseJump extends GuiWidgetBase {
 			enabled = false;
 		}
 		
-		if (mc.thePlayer.capabilities.isCreativeMode && !HUDWidgetsConfig.renderHorseJumpBarCreative) {
+		if (Minecraft.getMinecraft().player.capabilities.isCreativeMode && !HUDWidgetsConfig.renderHorseJumpBarCreative) {
 			enabled = false;
 		}
 		
-		if(mc.thePlayer.isRidingHorse() || HUDWidgetsConfig.alwaysRenderHorseJumpBar) {
+		if(Minecraft.getMinecraft().player.isRidingHorse() || HUDWidgetsConfig.alwaysRenderHorseJumpBar) {
 		
 			if (enabled) {
-				float power = mc.thePlayer.getHorseJumpPower();
+				float power = Minecraft.getMinecraft().player.getHorseJumpPower();
 				int jump = (int) Math.round(power * 200);
 				
 				double widthMultiplier = getResIncreaseMultiplier("x");
