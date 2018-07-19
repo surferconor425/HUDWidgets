@@ -33,7 +33,7 @@ public class GuiWidgetTime extends GuiWidgetBase {
 		if (enabled) {
 			FontRenderer font = mc.fontRenderer;
 			
-			double worldTime = mc.theWorld.getWorldInfo().getWorldTime();
+			double worldTime = mc.getMinecraft().world.getWorldInfo().getWorldTime();
 			int hour = 0;
 			int minute = 0;
 			double storedTime = worldTime;
@@ -64,7 +64,7 @@ public class GuiWidgetTime extends GuiWidgetBase {
 					hour = hour - 12;
 				}
 				
-				long hourTimer = mc.theWorld.getWorldInfo().getWorldTime();
+				long hourTimer = mc.getMinecraft().world.getWorldInfo().getWorldTime();
 				while (hourTimer > 24000) {
 					hourTimer = hourTimer - 24000;
 				}

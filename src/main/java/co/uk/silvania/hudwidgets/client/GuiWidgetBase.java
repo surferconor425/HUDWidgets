@@ -32,7 +32,7 @@ public class GuiWidgetBase extends Gui {
 	
 	public static void defaultResolution() {
 		//Ran on the game load. Gets the resolution your PC sets minecraft to initially, before you get a chance to resize it. Used for scaling.
-		ScaledResolution res = new ScaledResolution(mc.getMinecraft(), mc.getMinecraft().displayWidth, mc.getMinecraft().displayHeight);
+		ScaledResolution res = new ScaledResolution(Minecraft.getMinecraft().displayWidth, Minecraft.getMinecraft().displayHeight);
 		defaultWidth = res.getScaledWidth();
 		defaultHeight = res.getScaledHeight();
 	}
